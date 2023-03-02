@@ -19,49 +19,6 @@ void saveFile(T animal, ofstream& outFS) {
 	outFS << animal->getHunger() << endl;
 	outFS << animal->getSleepy() << endl;
 }
-//Failed attempt at load function
-/*template<typename X>
-X loadFile(ifstream& inFS) {
-	if (!inFS.is_open) {
-		cout << "A save file does not exist!" << endl;
-		exit(1);
-	}
-	string animalType;
-	string animalName;
-	string animalBreed;
-	int animalHappy;
-	int animalHunger;
-	int animalSleepy;
-	getline(inFS, animalType);
-	getline(inFS, animalName);
-	getline(inFS, animalBreed);
-	inFS >> animalHappy >> animalHunger >> animalSleepy;
-	
-	if (animalType == "Dog") {
-		Dog* doggy = new Dog(animalName, animalBreed);
-		doggy->setHappy(animalHappy);
-		doggy->setHunger(animalHunger);
-		doggy->setSleepy(animalSleepy);
-
-		return doggy;
-	}
-	else if (animalType == "Cat") {
-		Cat* kitty = new Cat(animalName, animalBreed);
-		kitty->setHappy(animalHappy);
-		kitty->setHunger(animalHunger);
-		kitty->setSleepy(animalSleepy);
-
-		return kitty;
-	}
-	else if (animalType == "Bat") {
-		Bat* batty = new Bat(animalName, animalBreed);
-		batty->setHappy(animalHappy);
-		batty->setHunger(animalHunger);
-		batty->setSleepy(animalSleepy);
-
-		return batty;
-	}
-}*/
 
 int main() {
 	string usrChoice = "999";
